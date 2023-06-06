@@ -96,9 +96,8 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- [ ] **[PostgreSQL DataBase]**
+- [ ] **[PostgreSQL Table]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -124,6 +123,11 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
+
+```sh
+ command prompt
+```
+
 <!--
 Example command:
 
@@ -136,55 +140,41 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/MarwanDev/vet_clinic.git
 ```
---->
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
 ```sh
   cd my-project
   gem install
 ```
---->
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
   rails server
 ```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
 
 ```sh
   bin/rails test test/models/article_test.rb
 ```
---->
+-
 
-### Deployment
+<!-- ### Deployment
 
-You can deploy this project using:
+You can deploy this project using: -->
 
 <!--
 Example:
@@ -237,7 +227,8 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project, kindly leave a comment below and share it with someone who enjoys coding! Coding is all about continuous learning and allowing yourself to be a beginner. Keep going!
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -247,7 +238,8 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I'm thankful to Microverse for providing a study platform which guided me through this project and to my coding partners at Microverse for the collaborative effort.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -257,13 +249,13 @@ I would like to thank...
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- **[Question_1] What is postgresql**
 
-  - [Answer_1]
+  - PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.
 
-- **[Question_2]**
+- **[Question_2] What is postgresql used for**
 
-  - [Answer_2]
+  - PostgreSQL is used as the primary data store or data warehouse for many web, mobile, geospatial, and analytics applications.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
