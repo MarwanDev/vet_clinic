@@ -40,3 +40,24 @@ references species(id),
 
 add foreign key(owner_id)
 references owners(id);
+
+create table vets (
+    id int primary key GENERATED ALWAYS AS IDENTITY,
+    name varchar(250),
+    age int,
+	date_of_graduation date
+);
+
+create table specializations (
+    id int primary key GENERATED ALWAYS AS IDENTITY,
+    species_id int references species(id),
+    vet_id int references vets(id)
+);
+
+create table visits (
+    id int primary key GENERATED ALWAYS AS IDENTITY,
+    animal_id int references animals(id),
+    vet_id int references vets(id),
+	date date
+);
+

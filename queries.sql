@@ -80,3 +80,78 @@ select animals.name from animals join species on species.id = animals.species_id
 owners on owners.id = animals.owner_id where owners.full_name = 'Jennifer Orwell' and species.name = 'Digimon';
 select animals.name from animals join owners on animals.owner_id = owners.id where owners.full_name = 'Dean Winchester' and animals.escape_attempts = 0;
 select owners.full_name name from animals join owners on animals.owner_id = owners.id group by owners.full_name order by count(*) desc limit 1;
+
+
+
+
+select animals.name
+from animals join visits
+on animals.id = visits.animal_id
+join vets on visits.vet_id = vets.id
+where vets.name = 'William Tatcher'
+order by visits.date desc limit 1;
+
+select count(*) 
+from animals join visits
+on animals.id = visits.animal_id
+join vets on visits.vet_id = vets.id
+where vets.name = 'Stephanie Mendez';
+
+select vets.name, species.name
+from vets left join specializations
+on vets.id = specializations.vet_id 
+left join species 
+on species.id = specializations.species_id;
+
+select animals.name 
+from animals join visits 
+on animals.id = visits.animal_id 
+join vets on vets.id = visits.vet_id 
+where vets.name = 'Stephanie Mendez' 
+and visits.date between '2020-04-01' and '2020-08-30';
+
+
+select animals.name
+from animals join visits
+on animals.id = visits.animal_id
+join vets on vets.id = visits.vet_id
+group by animals.name
+order by count(*) desc limit 1;
+
+
+select animals.name, visits.date
+from animals join visits 
+on animals.id = visits.animal_id
+join vets on vets.id = visits.vet_id
+where vets.name = 'Maisy Smith' 
+group by animals.name, visits.date 
+order by count(*) desc limit 1;
+
+select * from vets
+select animals.name, animals.date_of_birth, animals.weight_kg, 
+species.name, owners.full_name, vets.name, vets.age, 
+vets.date_of_graduation, visits.date 
+from animals join species 
+on animals.species_id = species.id 
+join owners on animals.owner_id = owners.id 
+join visits on animals.id = visits.animal_id 
+join vets on vets.id = visits.vet_id 
+group by animals.name, animals.date_of_birth, 
+animals.weight_kg, species.name, owners.full_name, 
+vets.name, vets.age, vets.date_of_graduation, 
+visits.date order by visits.date desc limit 1;
+
+
+select count(*) from 
+visits join vets on vets.id = visits.vet_id 
+join animals on animals.id = visits.animal_id 
+left join specializations 
+on specializations.species_id = animals.species_id 
+and specializations.vet_id = vets.id 
+where specializations.species_id IS NULL;
+
+select max(species.name) from 
+animals join visits on animals.id = visits.animal_id
+join species on animals.species_id = species.id
+where visits.vet_id = (select id from vets where name = 'Maisy Smith')
+order by count(*) desc limit 1;
